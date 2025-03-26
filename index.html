@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preusmjeravanje...</title>
+  <script>
+    // Check the platform and redirect
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Check if it's an iOS device
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      window.location.href = "https://apps.apple.com/us/app/mne-magazin/id1458786889"; // iOS App Store URL
+    }
+    // Check if it's an Android device
+    else if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.mnemagazin&hl=en"; // Google Play Store URL
+    } else {
+      // If the platform can't be detected, you can redirect to a landing page or show a message
+      window.location.href = "https://mnemagazin.me"; // Fallback URL (optional)
+    }
+  </script>
+</head>
+<body>
+  <p>Preusmjeravanje na adekvatnu app prodavnicu...</p>
+</body>
+</html>
